@@ -1,0 +1,277 @@
+﻿STT;Phòng thi;SBD;Mã sinh viên;Họ và tên;Lớp SH;Điểm ;Khoa/BM
+1;A2-301;TA002;4651300046;Đinh Trọng Hoàng ;Công nghệ kỹ thuật ô tô 46C;4,0;BM CN Ô tô
+2;A2-301;TA003;4651300150;Nguyễn Ngọc Trung;Công nghệ kỹ thuật ô tô 46A;5,1;BM CN Ô tô
+3;A2-301;TA004;4651050009;Huỳnh Nguyên Gia Bảo;CNTT 46C;4,6;CNTT
+4;A2-301;TA005;4651050021;Đặng Ngọc Châu;CNTT 46A;6,9;CNTT
+5;A2-301;TA006;4651050034;Trần Thanh Cường;CNTT 46D;5,0;CNTT
+6;A2-301;TA008;4651050073;Bùi Tấn Hậu;CNTT 46A;2,7;CNTT
+7;A2-301;TA009;4651050078;Phạm Minh Hiếu;CNTT 46A;3,1;CNTT
+8;A2-301;TA010;4651050088;Nguyễn Huy Hoàng;CNTT 46B;5,8;CNTT
+9;A2-301;TA011;4651050104;Đặng Quốc Hùng;CNTT 46D;3,1;CNTT
+10;A2-301;TA012;4651050111;Dương Đăng Kha;CNTT 46E;7,1;CNTT
+11;A2-301;TA013;4651050120;A Ân Khôi;CNTT 46C;3,5;CNTT
+12;A2-301;TA014;4651050130;Đặng Võ Hà Gia Kiệt;CNTT 46D;3,9;CNTT
+13;A2-301;TA015;4651050139;Phạm Văn Lâm;CNTT 46A;4,7;CNTT
+14;A2-301;TA016;4651050141;Nguyễn Hoàng Bảo Linh;CNTT 46A;3,8;CNTT
+15;A2-301;TA017;4651050144;Phạm Thị Thùy Linh;CNTT 46D;3,4;CNTT
+16;A2-301;TA018;4651050155;Lê Thị Thanh Lý;CNTT 46C;2,7;CNTT
+17;A2-301;TA019;4651050161;Y Kyly Mlo;CNTT 46C;4,7;CNTT
+18;A2-301;TA020;4651050177;Nguyễn Nhất Nguyên;CNTT 46D;3,1;CNTT
+19;A2-301;TA021;4651050180;Kiều Quang Nhân;CNTT 46C;4,0;CNTT
+20;A2-301;TA022;4651050184;Nguyễn Đức Nhật;CNTT 46B;5,8;CNTT
+21;A2-301;TA023;4651050187;Hồ Bảo Nhi;CNTT 46C;3,1;CNTT
+22;A2-301;TA024;4651050188;Hứa Thảo Nhi;CNTT 46A;4,9;CNTT
+23;A2-301;TA025;4651050210;Bùi Minh Phương;CNTT 46A;5,7;CNTT
+24;A2-301;TA026;4651050213;Nguyễn Đình Quân;CNTT 46C;2,6;CNTT
+25;A2-301;TA027;4651050232;Hà Thị Minh Tâm;CNTT 46C;5,0;CNTT
+26;A2-301;TA028;4651050236;Lê Tuấn Thành;CNTT 46C;2,4;CNTT
+27;A2-301;TA030;4651050252;Đinh Công Thịnh ;CNTT 46D;4,0;CNTT
+28;A2-301;TA031;4651050264;Nguyễn Thị Hồng Thư;CNTT 46C;3,8;CNTT
+29;A2-301;TA032;4651050276;Bùi Ngọc Toàn;CNTT 46D;2,7;CNTT
+30;A2-301;TA033;4651050283;Trương Thị Thùy Trang;CNTT 46C;5,1;CNTT
+31;A2-301;TA034;4651050284;Trương Thị Uyên Trang;CNTT 46C;4,6;CNTT
+32;A2-301;TA035;4651050308;Thái Huỳnh Tuấn;CNTT 46C;5,0;CNTT
+33;A2-301;TA036;4651050317;Nguyễn Thanh Tú;CNTT 46A;2,5;CNTT
+34;A2-301;TA037;4651050329;Trần Minh Vương;CNTT 46C;4,5;CNTT
+35;A2-301;TA038;4651190002;Võ Hoàng Bảo;KTPM 46;4,0;CNTT
+36;A2-301;TA040;4651190009;Tô Hoàng Hào;KTPM 46;4,5;CNTT
+37;A2-301;TA041;4651190021;Nguyễn Đoàn Phương Thảo;KTPM 46;2,7;CNTT
+38;A2-302;TA044;4659010001;Nguyễn Đoàn Trâm Anh;Giáo dục Tiểu học 46B;5,9;GDTH-MN
+39;A2-302;TA045;4659010012;Trần Thị Linh Chi;Giáo dục Tiểu học 46A;3,5;GDTH-MN
+40;A2-302;TA046;4659010026;Nguyễn Thị Hương Giang;Giáo dục Tiểu học 46A;4,2;GDTH-MN
+41;A2-302;TA048;4659010030;Mai Thị Thu Hảo;Giáo dục Tiểu học 46B;2,5;GDTH-MN
+42;A2-302;TA049;4659010037;Trương Diễm Hằng;Giáo dục Tiểu học 46A;4,3;GDTH-MN
+43;A2-302;TA050;4659010039;Trần Đỗ Gia Hân;Giáo dục Tiểu học 46A;4,4;GDTH-MN
+44;A2-302;TA051;4659010059;Nguyễn Thanh Huyền;Giáo dục Tiểu học 46A;3,4;GDTH-MN
+45;A2-302;TA052;4659010082;Huỳnh Thị Tuyết My;Giáo dục Tiểu học 46A;4,7;GDTH-MN
+46;A2-302;TA053;4659010099;Đặng Thị Minh Nguyệt;Giáo dục Tiểu học 46A;5,9;GDTH-MN
+47;A2-302;TA054;4659010107;Nguyễn Phạm Yến Nhi;Giáo dục Tiểu học 46A;5,2;GDTH-MN
+48;A2-302;TA055;4659010109;Trần Nguyễn Quỳnh Nhi;Giáo dục Tiểu học 46A;3,7;GDTH-MN
+49;A2-302;TA056;4659010111;Hoàng Thị Bích Như;Giáo dục Tiểu học 46C;2,8;GDTH-MN
+50;A2-302;TA057;4659010114;Huỳnh Trà Bảo Ny;Giáo dục Tiểu học 46A;5,0;GDTH-MN
+51;A2-302;TA058;4659010118;Lê Mai Phương;Giáo dục Tiểu học 46A;4,4;GDTH-MN
+52;A2-302;TA059;4659010120;Nguyễn Thị Hoàng Phương;Giáo dục Tiểu học 46C;5,3;GDTH-MN
+53;A2-302;TA060;4659010128;Võ Thị Ái Sương;Giáo dục Tiểu học 46B;3,8;GDTH-MN
+54;A2-302;TA061;4659010145;Đỗ Vy Thoa;Giáo dục Tiểu học 46B;5,6;GDTH-MN
+55;A2-302;TA062;4659010156;Đoàn Anh Thư;Giáo dục Tiểu học 46A;3,0;GDTH-MN
+56;A2-302;TA063;4659010162;Trần Thị Nhất Thương;Giáo dục Tiểu học 46A;3,5;GDTH-MN
+57;A2-302;TA065;4659010170;Đỗ Đoàn Ngọc Trâm;Giáo dục Tiểu học 46A;3,8;GDTH-MN
+58;A2-302;TA066;4659010179;Lý Xuân Uyên;Giáo dục Tiểu học 46C;5,7;GDTH-MN
+59;A2-302;TA067;4659010193;Lâm Thị Triệu Vy;Giáo dục Tiểu học 46A;3,8;GDTH-MN
+60;A2-302;TA069;4652050013;Phạm Thùy Trâm;CNKT Hóa học;3,3;KHTN
+61;A2-302;TA073;4652050004;Huỳnh An Khang;CNKT Hóa học;6,5;KHTN
+62;A2-302;TA074;4652050012;Trần Thu Trang;CNKT Hóa học;3,1;KHTN
+63;A2-302;TA076;4652050016;Trần Thị Diệu ;CNKT Hóa học;3,3;KHTN
+64;A2-302;TA078;4653030011;Võ Hoài Nam;Nông học;2,3;KHTN
+65;A2-302;TA080;4653030017;Nguyễn Văn Tây;Nông học;2,2;KHTN
+66;A2-302;TA081;4656050003;Nguyễn Gia Bảo;Tâm lý học giáo dục 46;5,5;KHXH&NV
+67;A2-302;TA082;4656050014;Lê Thị Thu Hiền;Tâm lý học giáo dục 46;4,4;KHXH&NV
+68;A2-302;TA083;4656050025;Đào Trọng Lưu;Tâm lý học giáo dục 46;3,1;KHXH&NV
+69;A2-302;TA084;4656050028;Trần Dương Quốc Mạnh;Tâm lý học giáo dục 46;7,4;KHXH&NV
+70;A2-302;TA085;4656130012;Phan Thị Giác;Đông phương học 46C;3,5;KHXH&NV
+71;A2-302;TA086;4656130024;Nguyễn Thị Lệ Huyền;Đông phương học 46C;3,7;KHXH&NV
+72;A2-303;TA087;4656130037;Trần Huỳnh Nhật Linh;Đông phương học 46C;3,0;KHXH&NV
+73;A2-303;TA088;4656130052;Hoàng Thị Kim Ngân;Đông phương học 46C;4,1;KHXH&NV
+74;A2-303;TA089;4656130110;Lê Nguyễn Hoàng Trâm;Đông phương học 46C;2,9;KHXH&NV
+75;A2-303;TA090;4651160018;Nguyễn Anh Hoàng;KTXD 46A;3,5;KT&CN
+76;A2-303;TA091;4651160034;Nguyễn Đức Nhật Minh;KTXD 46A;4,1;KT&CN
+77;A2-303;TA092;4651170002;Nguyễn Gia Ân;Kỹ thuật điện 46A;6,7;KT&CN
+78;A2-303;TA093;4651170013;Đinh Quốc Duy;Kỹ thuật điện 46A;2,4;KT&CN
+79;A2-303;TA095;4651170042;Trịnh Hưng Khôi ;Kỹ thuật điện 46A;2,5;KT&CN
+80;A2-303;TA097;4651170080;Nguyễn Quốc Vinh;Kỹ thuật điện 46B;2,5;KT&CN
+81;A2-303;TA098;4651170099;Phạm Ngọc Hiếu;kỹ thuật điện 46B;3,7;KT&CN
+82;A2-303;TA099;4651170101;Huỳnh Huy Hoàng;Kỹ thuật điện 46B;3,1;KT&CN
+83;A2-303;TA100;4651170132;Nguyễn Quốc Trọng;Kỹ thuật điện 46B;5,1;KT&CN
+84;A2-303;TA101;4651180009;Trần Phúc Lâm;Kỹ Thuật Điện Tử -  VT 46;3,4;KT&CN
+85;A2-303;TA102;4651200005;Lữ Trần Nhật Duy;Kỹ thuật điều khiển và tự động hoá K46;3,0;KT&CN
+86;A2-303;TA104;4651200014;Huỳnh Thanh Huy;Kỹ thuật điều khiển và tự động hoá K46;2,7;KT&CN
+87;A2-303;TA105;4651200024;Bùi Anh Kiệt;Kỹ thuật điều khiển và tự động hoá K46;2,6;KT&CN
+88;A2-303;TA106;4651200034;Thái Hồ Thanh Sang;Kỹ thuật điều khiển và tự động hoá K46;3,5;KT&CN
+89;A2-303;TA107;4651200037;Nguyễn Đức Tâm;Kỹ thuật điều khiển và tự động hoá K46;3,7;KT&CN
+90;A2-303;TA108;4651200045;Đỗ Nguyễn Hiếu Trung;Kỹ thuật điều khiển và tự động hoá K46;4,7;KT&CN
+91;A2-303;TA109;4651170072;Đinh Minh Tuấn;Kỹ thuật điện 46B;2,6;KT&CN
+92;A2-303;TA113;4654030002;Lê Huỳnh Trân Châu;Kinh tế 46B;3,1;KT&KT
+93;A2-303;TA114;4654030006;Bùi Thanh Diễm;Kinh tế 46A;2,8;KT&KT
+94;A2-303;TA115;4654030034;Hoàng Ngọc Linh ;Kinh tế 46B;5,8;KT&KT
+95;A2-303;TA116;4654030063;Võ Lưu Quỳnh Như;Kinh tế 46A;3,5;KT&KT
+96;A2-303;TA117;4654030067;Ngô Đình Anh Quân;Kinh tế 46A;2,8;KT&KT
+97;A2-303;TA118;4654030092;Hoàng Kim Tuyến;Kinh tế 46A;2,2;KT&KT
+98;A2-303;TA119;4654030100;Huỳnh Nguyễn Như Ý;Kinh tế 46A;4,7;KT&KT
+99;A2-303;TA121;4654040068;Hồ Thị Minh Huyền;Kế Toán 46B;4,4;KT&KT
+100;A2-303;TA122;4654040070;Hồ Thị Minh Kha;Kế toán 46D;3,8;KT&KT
+101;A2-303;TA123;4654040204;Lê Thị Kiều Trang;Kế toán 46A;3,4;KT&KT
+102;A2-303;TA124;4654040207;Trần Thị Thuỳ Trang ;Kế Toán 46C;3,4;KT&KT
+103;A2-303;TA125;4654040218;Phan Thị Mỹ Trinh;Kế toán 46C;4,9;KT&KT
+104;A2-303;TA126;4654040317;Nguyễn Thị Diễm;Kế toán 46C;3,3;KT&KT
+105;A2-303;TA127;4654080002;Lê Cao Bằng;Kiểm toán 46;3,9;KT&KT
+106;A2-303;TA128;4654080022;Thái Phan Thanh Ngân;Kiểm toán 46;7,4;KT&KT
+107;A2-303;TA129;4654080036;Trương Đào Ngọc Thẩm;Kiểm toán 46;4,8;KT&KT
+108;A2-304;TA130;4654080088;Phạm Hồng Thắm;Kiểm toán 46;5,7;KT&KT
+109;A2-304;TA133;4655020023;Đặng Thảo Nguyên;Kế toán CLC;3,6;KT&KT
+110;A2-304;TA134;4655020026;Hồ Thị Vi Trâm;Kế toán CLC;3,1;KT&KT
+111;A2-304;TA138;4655020038;Trần Thị Huyền Trân;Kế toán CLC;3,4;KT&KT
+112;A2-304;TA139;4656100015;Trần Hương Giang;QLNN K46;3,5;LLCT-Luật &QLNN
+113;A2-304;TA140;4656100103;Tô Thị Huyền Trang;QLNN K46;3,4;LLCT-Luật &QLNN
+114;A2-304;TA141;4656100114;Phan Ngọc Cẩm Tú;QLNN K46;4,0;LLCT-Luật &QLNN
+115;A2-304;TA143;4656120076;Nguyễn Lê Khánh Linh;Luật 46B;4,3;LLCT-Luật &QLNN
+116;A2-304;TA144;4656120088;Lê Kiều My;luật 46B;3,8;LLCT-Luật &QLNN
+117;A2-304;TA145;4656120098; Châu Ngọc Bảo Ngân;Luật 46C;4,2;LLCT-Luật &QLNN
+118;A2-304;TA146;4656120145;Lý Minh Tánh;Luật 46B;2,8;LLCT-Luật &QLNN
+119;A2-304;TA147;4656120133;Phan Ngân Phúc;Luật 46A;3,4;LLCT-Luật &QLNN
+120;A2-304;TA149;4656120235;Đỗ Thị Tuyết Ngân;Luật 46C;4,6;LLCT-Luật &QLNN
+121;A2-304;TA152;4657520001;Lê Phương Bình;Ngôn Ngữ Trung Quốc 46;5,6;Ngoại ngữ
+122;A2-304;TA153;4657520003;Đặng Thị Trúc Diễm;Ngôn Ngữ Trung Quốc 46;5,8;Ngoại ngữ
+123;A2-304;TA154;4657520005;Phạm Thị Diệp;Ngôn Ngữ Trung Quốc 46;3,2;Ngoại ngữ
+124;A2-304;TA156;4657520009;Nguyễn Minh Hạ;Ngôn Ngữ Trung Quốc 46;6,3;Ngoại ngữ
+125;A2-304;TA158;4657520012;Nguyễn Thị Thu Hường ;Ngôn Ngữ Trung Quốc 46;4,3;Ngoại ngữ
+126;A2-304;TA159;4657520018;Mai Thị Mến ;Ngôn Ngữ Trung Quốc 46;3,7;Ngoại ngữ
+127;A2-304;TA161;4657520020;Phạm Thị Kiều My;Ngôn Ngữ Trung Quốc 46;2,4;Ngoại ngữ
+128;A2-304;TA162;4657520021;Trần Diễm My;Ngôn Ngữ Trung Quốc 46;5,8;Ngoại ngữ
+129;A2-304;TA163;4657520023;Lục Thị Nhàn;Ngôn Ngữ Trung Quốc 46;2,6;Ngoại ngữ
+130;A2-304;TA164;4657520024;Nguyễn Thị Hạnh Nhân;Ngôn Ngữ Trung Quốc 46;4,3;Ngoại ngữ
+131;A2-304;TA165;4657520027;Trần Thị Bích Nhung;Ngôn Ngữ Trung Quốc 46;2,5;Ngoại ngữ
+132;A2-304;TA166;4657520029;Huỳnh Thị Ánh Như;Ngôn Ngữ Trung Quốc 46;4,9;Ngoại ngữ
+133;A2-304;TA167;4657520035;Lưu Nguyễn Hồng Quân;Ngôn Ngữ Trung Quốc 46;4,6;Ngoại ngữ
+134;A2-304;TA168;4657520043;Trần Thị Mỹ Trang;Ngôn Ngữ Trung Quốc 46;4,4;Ngoại ngữ
+135;A2-304;TA169;4657520045;Trần  Ngọc Phương Trâm;Ngôn Ngữ Trung Quốc 46;3,9;Ngoại ngữ
+136;A2-304;TA170;4657520047;Phan Văn Trung;Ngôn Ngữ Trung Quốc 46;4,8;Ngoại ngữ
+137;A2-304;TA171;4657520050;Hoàng Nguyễn Phương Uyên;Ngôn Ngữ Trung Quốc 46;4,3;Ngoại ngữ
+138;A2-304;TA172;4657520055;Ngô Thảo Vy;Ngôn Ngữ Trung Quốc 46;2,0;Ngoại ngữ
+139;A2-305;TA173;4657520056;Nguyễn Thị Thanh Xuân;Ngôn Ngữ Trung Quốc 46;3,8;Ngoại ngữ
+140;A2-305;TA174;4651010002;Phùng Gia Bảo;Sư phạm Toán K46;7,0;Sư phạm
+141;A2-305;TA175;4651010003;Nguyễn Trọng Bình;Sư phạm Toán K46;4,4;Sư phạm
+142;A2-305;TA176;4651010004;Trần Lê Bảo Hà;Sư phạm Toán K46;3,9;Sư phạm
+143;A2-305;TA177;4651010005;Nguyễn Thành Hậu;Sư phạm Toán K46;3,5;Sư phạm
+144;A2-305;TA178;4651010006;Chu Minh Hiếu;Sư Phạm Toán K46;7,1;Sư phạm
+145;A2-305;TA179;4651010007;Nguyễn Quang Hoàng Lộc;Sư phạm Toán K46;3,7;Sư phạm
+146;A2-305;TA180;4651010009;Châu Thành Lương;Sư phạm Toán K46;4,2;Sư phạm
+147;A2-305;TA181;4651010011;Nguyễn Tấn Phát;Sư phạm Toán K46;4,2;Sư phạm
+148;A2-305;TA182;4651010012;Đặng Lê Quỳnh;Sư phạm Toán K46;4,8;Sư phạm
+149;A2-305;TA183;4651010013;Nguyễn Đắc Tài;Sư phạm Toán K46;7,1;Sư phạm
+150;A2-305;TA184;4651010014;Lê Bùi Phương Thảo;Sư phạm Toán K46;4,7;Sư phạm
+151;A2-305;TA185;4651010017;Huỳnh Đoàn Ngọc Vinh;Sư phạm Toán K46;2,9;Sư phạm
+152;A2-305;TA186;4651010018;Phạm Nguyễn Phương Vy;Sư Phạm Toán K46;3,2;Sư phạm
+153;A2-305;TA187;4651020010;Phạm Đặng Ánh Như;Sư phạm Vật Lý K46;4,2;Sư phạm
+154;A2-305;TA188;4651020012;Lê Phương Thảo;Sư phạm Vật Lý K46;3,9;Sư phạm
+155;A2-305;TA189;4651020014;Lê Minh Thi;Sư phạm Vật Lý K46;5,0;Sư phạm
+156;A2-305;TA190;4651020017;Nguyễn Thành Trung;Sư phạm Vật Lý K46;5,9;Sư phạm
+157;A2-305;TA192;4651130012;Nguyễn Quang Huy;Sư phạm Tin học K46;3,5;Sư phạm
+158;A2-305;TA193;4651130019;Đỗ Thị Minh Nguyệt;Sư phạm Tin học K46;2,5;Sư phạm
+159;A2-305;TA194;4651130020;Lê Thị Ngọc Nhất;Sư phạm Tin học K46;4,7;Sư phạm
+160;A2-305;TA195;4651130023;Lê Phương Thảo;Sư phạm Tin học K46;3,4;Sư phạm
+161;A2-305;TA196;4651130024;Phạm Bích Thùy;Sư phạm Tin học K46;3,5;Sư phạm
+162;A2-305;TA198;4651130046;Lê Văn Dũng;Sư phạm Tin học K46;3,5;Sư phạm
+163;A2-305;TA201;4651130088;Phạm Thị Diễm Quyên ;Sư phạm Tin học K46;2,0;Sư phạm
+164;A2-305;TA202;4656010006;Võ Thúy Hồng;Sư phạm Ngữ văn K46;3,4;Sư phạm
+165;A2-305;TA203;4656020004;Trần Kiều Giáng Hương;Sư phạm Lịch sử 46;5,3;Sư phạm
+166;A2-305;TA204;4656020005;Lê Phùng Bảo Khanh;Sư phạm Lịch sử 46;6,1;Sư phạm
+167;A2-305;TA205;4656020012;Phan Thị Đặng Tâm;Sư phạm Lịch sử 46;4,3;Sư phạm
+168;A2-305;TA208;4658010001;Mai Dân An;SP KHTN 46B;2,8;Sư phạm
+169;A2-305;TA209;4658010002;Tô Hoài An;SP KHTN 46B;2,9;Sư phạm
+170;A2-305;TA210;4658010034;Trần Lê Diệu Hằng;SP KHTN 46B;4,0;Sư phạm
+171;A2-305;TA211;4658010035;Huỳnh Thị Ngọc Hân;SP KHTN 46A;3,7;Sư phạm
+172;A2-305;TA212;4658010036;Nguyễn Ngọc Hân;SP KHTN 46B;4,6;Sư phạm
+173;A2-305;TA214;4658010097;Nguyễn Thị Nhung;SP KHTN 46B;4,1;Sư phạm
+174;A2-305;TA215;4658010113;Đặng Như Quỳnh;SP KHTN 46B;3,3;Sư phạm
+175;A2-306;TA216;4658010124;Phạm Thị Thảo;SP KHTN 46B;3,1;Sư phạm
+176;A2-306;TA217;4658010125;Phạm Thu Thảo;SP KHTN 46A;4,5;Sư phạm
+177;A2-306;TA218;4658010127;Cao Đức Thắng;SP KHTN 46C;4,1;Sư phạm
+178;A2-306;TA219;4658010129;Bùi Thị Quỳnh Thi;SP KHTN 46B;3,5;Sư phạm
+179;A2-306;TA220;4658010137;Lê Thị Minh Thư;SP KHTN 46B;5,2;Sư phạm
+180;A2-306;TA221;4658010139;Nguyễn Thị Anh Thư;SP KHTN 46A;4,3;Sư phạm
+181;A2-306;TA223;4658010148;Nguyễn Thùy Trang ;SP KHTN 46B;2,3;Sư phạm
+182;A2-306;TA224;4658010150;Lê Ngọc Trâm;SP KHTN 46A;2,8;Sư phạm
+183;A2-306;TA225;4658010151;Mai Bảo Trâm;SP KHTN 46B;4,6;Sư phạm
+184;A2-306;TA226;4658010159;Nguyễn  Phạm Văn Trường ;SP KHTN 46B;4,3;Sư phạm
+185;A2-306;TA227;4658020005;Trần Thị Vân Anh;Sư phạm Lịch sử & Địa lý K46A ;3,3;Sư phạm
+186;A2-306;TA228;4658020050;Lê Công Hồng Phú;Sư phạm Lịch sử & Địa lí K46B;3,8;Sư phạm
+187;A2-306;TA229;4658020083;Hoàng Quốc Vinh ;Sư phạm Lịch sử & Địa lý K46A ;2,3;Sư phạm
+188;A2-306;TA230;4654010006;Trương Thị Lan Anh;Quản trị kinh doanh 46C;3,6;TCNH&QTKD
+189;A2-306;TA232;4654010038;Phan Thị Xuân Đến ;Quản trị kinh doanh 46B;3,1;TCNH&QTKD
+190;A2-306;TA233;4654010039;Trần Đình Gia;Quản trị kinh doanh 46A;2,9;TCNH&QTKD
+191;A2-306;TA234;4654010045;Đặng Thị Thuý Hà;Quản trị kinh doanh 46B;3,3;TCNH&QTKD
+192;A2-306;TA235;4654010052;Nguyễn Thuý Hằng;Quản trị kinh doanh 46D;3,1;TCNH&QTKD
+193;A2-306;TA236;4654010056;Lê Huyền Hân;Quản trị kinh doanh 46C;3,6;TCNH&QTKD
+194;A2-306;TA237;4654010059;Trần Gia Hân;Quản trị kinh doanh 46B;3,4;TCNH&QTKD
+195;A2-306;TA238;4654010105;Nguyễn Thị Thùy Linh;Quản trị kinh doanh 46B;3,5;TCNH&QTKD
+196;A2-306;TA239;4654010125;Lê Thị Diễm My;Quản trị kinh doanh 46B;3,4;TCNH&QTKD
+197;A2-306;TA241;4654010133;Bùi Thị Thủy Ngân ;Quản trị kinh doanh 46B;2,8;TCNH&QTKD
+198;A2-306;TA242;4654010145;Võ Thị Thu Nguyên ;Quản trị kinh doanh 46B;2,5;TCNH&QTKD
+199;A2-306;TA243;4654010146;Trịnh Thị Ánh Nguyệt ;Quản trị kinh doanh 46B;3,0;TCNH&QTKD
+200;A2-306;TA244;4654010161;Nguyễn Thị Trinh Nữ ;Quản trị kinh doanh 46B;2,6;TCNH&QTKD
+201;A2-306;TA245;4654010168;Trịnh Hoàng Phúc;Quản trị kinh doanh 46A;3,3;TCNH&QTKD
+202;A2-306;TA246;4654010191;Nguyễn Ngọc Sơn ;Quản trị kinh doanh 46B;1,9;TCNH&QTKD
+203;A2-306;TA247;4654010197;Lê Thị Minh Thanh;Quản trị kinh doanh 46B;0,1;TCNH&QTKD
+204;A2-306;TA248;4654010199;Đỗ Dương Phương Thảo;Quản trị kinh doanh 46A;2,9;TCNH&QTKD
+205;A2-306;TA250;4654010205;Trần Thị Phương Thảo;Quản trị kinh doanh 46B;3,2;TCNH&QTKD
+206;A2-306;TA251;4654010239;Nguyễn Thuỷ Tiên;Quản trị kinh doanh 46B;4,4;TCNH&QTKD
+207;A2-306;TA253;4654010246;Chu Thuỳ Trang;Quản trị kinh doanh 46A;3,4;TCNH&QTKD
+208;A2-306;TA255;4654010250;Huỳnh Thị Mỹ Trà;Quản trị kinh doanh 46A;4,1;TCNH&QTKD
+209;A2-306;TA256;4654010251;Lâm Thị Bích Trâm ;Quản trị kinh doanh 46B;4,2;TCNH&QTKD
+210;A2-306;TA257;4654010261;Nguyễn Thị Mỹ Trinh ;Quản trị kinh doanh 46B;2,5;TCNH&QTKD
+211;A2-306;TA258;4654010268;Đoàn Thị Kim Tuyền;Quản trị kinh doanh 46D;3,2;TCNH&QTKD
+212;A2-307;TA259;4654010277;Nguyễn Hưng Thảo Vi;Quản trị kinh doanh 46C;4,5;TCNH&QTKD
+213;A2-307;TA261;4654010307;Nguyễn Kiều My;Quản trị kinh doanh 46B;2,9;TCNH&QTKD
+214;A2-307;TA262;4654010342;Nguyễn Thị Ngọc Trân;Quản trị kinh doanh 46B;2,8;TCNH&QTKD
+215;A2-307;TA263;4654050004;Đặng Thị Bích Châu;Tài chính ngân hàng 46A;3,0;TCNH&QTKD
+216;A2-307;TA264;4654050008;Võ Thị Huyền Dung;Tài chính ngân hàng 46A;3,8;TCNH&QTKD
+217;A2-307;TA265;4654050020;Trần Thị Mỹ Hạnh;Tài chính ngân hàng 46B;3,8;TCNH&QTKD
+218;A2-307;TA268;4654050043;Lâm Gia Linh;Tài chính ngân hàng 46B;4,0;TCNH&QTKD
+219;A2-307;TA269;4654050048;Đặng Hữu Lợi ;Tài chính ngân hàng 46B;3,2;TCNH&QTKD
+220;A2-307;TA270;4654050052;Đào Quỳnh Mai;Tài chính ngân hàng 46A;5,7;TCNH&QTKD
+221;A2-307;TA271;4654050059;Dương Trần Thảo Nguyên;Tài chính ngân hàng 46B;2,4;TCNH&QTKD
+222;A2-307;TA272;4654050065;Tô Thị Hồng Nhung ;Tài chính ngân hàng 46B;4,6;TCNH&QTKD
+223;A2-307;TA273;4654050075;Nguyễn Di Quyên;Tài chính ngân hàng 46A;2,3;TCNH&QTKD
+224;A2-307;TA275;4654050087;Nguyễn Ánh Nguyệt Thanh;Tài chính ngân hàng 46B;4,2;TCNH&QTKD
+225;A2-307;TA276;4654050102;Tô Nguyễn Anh Thư;Tài chính ngân hàng 46A;3,4;TCNH&QTKD
+226;A2-307;TA277;4654050115;Trần Nguyễn Thảo Uyên ;Tài chính ngân hàng 46A;3,5;TCNH&QTKD
+227;A2-307;TA278;4654050124;Trần Thị Minh Yến;Tài chính ngân hàng 46A;3,1;TCNH&QTKD
+228;A2-307;TA279;4654060014;Lê Nguyễn Quỳnh Giang;Quản trị dịch vụ du lịch và lữ hành 46A;3,2;TCNH&QTKD
+229;A2-307;TA282;4654060119;Đinh Thị Minh Uyên;Quản trị dịch vụ du lịch và lữ hành 46B;3,7;TCNH&QTKD
+230;A2-307;TA283;4654070001;Lê Nguyễn Trâm Anh ;Quản trị khách sạn 46A;5,6;TCNH&QTKD
+231;A2-307;TA286;4654070035;Lê Ngọc Khả Hân;Quản trị khách sạn 46B;1,9;TCNH&QTKD
+232;A2-307;TA290;4654070071;Trần Nguyễn Huyền Linh;Quản trị khách sạn 46A;3,9;TCNH&QTKD
+233;A2-307;TA291;4654070078;Nguyễn Quỳnh Mai;Quản trị khách sạn 46B;4,1;TCNH&QTKD
+234;A2-307;TA292;4654070090;Phạm Nữ Thùy Ngân;Quản trị khách sạn 46B;2,8;TCNH&QTKD
+235;A2-307;TA296;4654070132;Lê Thị Hồng Tâm;Quản trị khách sạn 46B;2,9;TCNH&QTKD
+236;A2-307;TA297;4654070133;Trà Nhã Thanh;Quản trị khách sạn 46B;4,2;TCNH&QTKD
+237;A2-307;TA298;4654070140;Đoàn Thị Mỹ Thu;Quản trị khách sạn 46B;2,6;TCNH&QTKD
+238;A2-307;TA300;4654070144;Nguyễn Anh Thư;Quản trị khách sạn 46B;4,1;TCNH&QTKD
+239;A2-307;TA301;4654070146;Nguyễn Thị Minh Thư;Quản trị khách sạn 46B;2,9;TCNH&QTKD
+240;A2-308;TA302;4654070147;Phan Anh Thư;Quản trị khách sạn 46B;4,8;TCNH&QTKD
+241;A2-308;TA305;4654070166;Thái Huỳnh Tú;Quản trị khách sạn 46B;3,8;TCNH&QTKD
+242;A2-308;TA306;4654070180;Nguyễn Thị Lệ Xuân;Quản trị khách sạn 46B;4,3;TCNH&QTKD
+243;A2-308;TA307;4654070194;Nguyễn Đình Hiệu;Quản trị khách sạn 46B;4,2;TCNH&QTKD
+244;A2-308;TA308;4654070211;Nguyễn Phú;Quản trị khách sạn 46B;4,9;TCNH&QTKD
+245;A2-308;TA310;4654090009;Lê Trần Mỹ Diệu;Logistics và quản lí chuỗi cung ứng 46A;4,3;TCNH&QTKD
+246;A2-308;TA311;4654090018;Trịnh Ngân Hà;Logistics và quản lí chuỗi cung ứng 46A;4,1;TCNH&QTKD
+247;A2-308;TA312;4654090023;Huỳnh Thị Hằng ;Logistics và quản lí chuỗi cung ứng 46B;3,1;TCNH&QTKD
+248;A2-308;TA313;4654090025;Hồ Hứa Hoàng Hân ;Logistics và quản lí chuỗi cung ứng 46B;4,4;TCNH&QTKD
+249;A2-308;TA314;4654090027;Nguyễn Hồ Hậu;Logistics và quản lí chuỗi cung ứng 46B;3,9;TCNH&QTKD
+250;A2-308;TA315;4654090028;Phạm Trần Đức Hậu;Logistics và quản lí chuỗi cung ứng 46A;3,4;TCNH&QTKD
+251;A2-308;TA316;4654090029;Nguyễn Thanh Hiền;Logistics và quản lí chuỗi cung ứng 46A;3,9;TCNH&QTKD
+252;A2-308;TA317;4654090031;Nguyễn Thị Thu Hiền;Logistics và quản lí chuỗi cung ứng 46A;3,2;TCNH&QTKD
+253;A2-308;TA318;4654090034;Võ Thanh Hoa;Logistics và quản lí chuỗi cung ứng 46A;3,0;TCNH&QTKD
+254;A2-308;TA319;4654090036;Lê Khánh Huyền;Logistics và quản lí chuỗi cung ứng 46B;3,9;TCNH&QTKD
+255;A2-308;TA320;4654090046;Phạm Khánh Linh;Logistics và quản lí chuỗi cung ứng 46A;3,7;TCNH&QTKD
+256;A2-308;TA321;4654090055;Nguyễn Bích Ngân;Logistics và quản lí chuỗi cung ứng 46B;4,6;TCNH&QTKD
+257;A2-308;TA322;4654090058;Nguyễn Quỳnh Như Ngân;Logistics và quản lí chuỗi cung ứng 46B;5,0;TCNH&QTKD
+258;A2-308;TA323;4654090059;Phan Huỳnh Thanh Ngân ;Logistics và quản lí chuỗi cung ứng 46B;6,3;TCNH&QTKD
+259;A2-308;TA324;4654090064;Nguyễn Thanh Nhàn;Logistics và quản lí chuỗi cung ứng 46B;6,0;TCNH&QTKD
+260;A2-308;TA325;4654090069;Trần Minh Tú Nhi;Logistics và quản lí chuỗi cung ứng 46B;5,1;TCNH&QTKD
+261;A2-308;TA327;4654090086;Phan Thái Như Quỳnh;Logistics và quản lí chuỗi cung ứng 46A;5,5;TCNH&QTKD
+262;A2-308;TA328;4654090087;Nguyễn Phú Quý;Logistics và quản lí chuỗi cung ứng 46A;3,0;TCNH&QTKD
+263;A2-308;TA329;4654090089;Trần Thị Thu Sen ;Logistics và quản lí chuỗi cung ứng 46B;3,0;TCNH&QTKD
+264;A2-308;TA330;4654090094;Nguyễn Ngọc Bảo Thái;Logistics và quản lí chuỗi cung ứng 46A;5,1;TCNH&QTKD
+265;A2-308;TA331;4654090096;Trần Thị Thi ;Logistics và quản lí chuỗi cung ứng 46B;3,8;TCNH&QTKD
+266;A2-308;TA332;4654090107;Trần Anh Thư;Logistics và quản lí chuỗi cung ứng 46B;6,3;TCNH&QTKD
+267;A2-308;TA333;4654090108;Nguyễn Nữ Hoài Thương;Logistics và quản lí chuỗi cung ứng 46A;5,1;TCNH&QTKD
+268;A2-308;TA334;4654090115;Lê Hương Trà;Logistics và quản lí chuỗi cung ứng 46A;6,5;TCNH&QTKD
+269;A2-308;TA335;4654090119;Lưu Ngọc Trân;Logistics và quản lí chuỗi cung ứng 46B;4,3;TCNH&QTKD
+270;A2-308;TA336;4654090120;Nguyễn Thị Quỳnh Trân;Logistics và quản lí chuỗi cung ứng 46A;2,7;TCNH&QTKD
+271;A2-308;TA337;4654090150;Trần Thanh Hoàng;Logistics và quản lí chuỗi cung ứng 46A;5,5;TCNH&QTKD
+272;A2-308;TA338;4654090151;Bùi Thị Bích Hợp;Logistics và quản lí chuỗi cung ứng 46B;3,3;TCNH&QTKD
+273;A2-308;TA339;4654090174;Ngô Trần Ái Vy;Logistics và quản lí chuỗi cung ứng 46A;4,3;TCNH&QTKD
+274;A2-308;TA340;4651140009;Phan Thị Thu Thủy;Toán ứng dụng K46;4,0;Toán - TK
+275;A2-308;TA342;4651140013;Ngô Bảo Thị Như Ý;Toán ứng dụng K46;3,6;Toán - TK
+276;A2-308;TA344;4654110019;Lê Thị Phụng;Khoa học dữ liệu K46;8,0;Toán - TK
