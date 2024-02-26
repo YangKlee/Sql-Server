@@ -149,3 +149,4 @@ where HoaDon.MaKH = KhachHang.MaKH and KhachHang.SoDt = '0963600126'
 delete from KhachHang
 from HoaDon
 where HoaDon.MaKH = KhachHang.MaKH and datediff(day, HoaDon.NgayHD, GETDATE()) > 365
+
