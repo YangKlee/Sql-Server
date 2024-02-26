@@ -72,12 +72,12 @@ insert into KhachHang
 values
 ('4651050044', N'Nguyễn Khánh Dương', N'Bùi Thị Xuân, Quy Nhơn, Bình Định', '0356701052', '2005-07-18', 300),
 ('4651050189', N'Nguyễn Yến Nhi', N'Tuy Phước, Quy Nhơn, Bình Định', '0395374593', '2005-02-16', 345.9),
-('4651050034', N'Trần Thanh Cường', N'Tuy Phước, Quy Nhơn, Bình Định', '0358398336', '2005-08-25', 879.5),
+('4651050034', N'Trần Thanh Cường', N'Tuy Phước, Quy Nhơn, Bình Định', '0963600126', '2005-08-25', 879.5),
 ('8319000245', N'Hutao', N'Vãng Sinh Đường, Cảng Liyue, Teyvat', '0356701023', '2005-02-18', 1930.68),
 ('8418036804', N'Ningguang', N'Quần Ngọc Các, Liyue, Teyvat', '0356703042', '2005-08-26', 999999.9)
 insert into NhanVien
 values
-('0400002001', N'Neuvilete', '2005-12-18', 0, '2012-09-25', '0542356731', 'neuvilete@fontaine.email.com' ),
+('0400002001', N'Neuvilete', '1954-12-18', 0, '2012-09-25', '0542356731', 'neuvilete@fontaine.email.com' ),
 ('0400002002', N'Furina', '2005-10-13', 0, '2012-09-13', '0542356732', 'furina@fontaine.email.com' ),
 ('0100002001', N'Klee', '2005-07-27', 1, '2019-04-27', '0242336531', 'klee@mondstadt.email.com' ),
 ('0300002002', N'Nahida', '2005-10-27', 1, '2014-04-16', '0244332531', 'thao@sumeru.email.com' ),
@@ -87,7 +87,10 @@ values
 ('SP20230401', N'Fonta', N'Viện KH Fontaine', 'Fontaine', 300, 2000),
 ('SP20230402', N'Hòm 2 tầng', N'Vãng Sinh Đường', 'Liyue', 25000, 100),
 ('SP20230403', N'Sữa Dango', N'Thành Inazuma', 'Inazuma', 100, 1000),
-('SP20230404', N'Nước thánh Barbara', N'Không rõ nguồn gốc', 'Mondstadt', 10000, 50)
+('SP20230404', N'Nước thánh Barbara', N'Không rõ nguồn gốc', 'Mondstadt', 10000, 50),
+('SP20230405', N'Gối ôm Klee', N'Nhật Bản', N'Nhật Bản', 54000, 1500),
+('SP20230406', N'Gối ôm Nahida', N'Nhật Bản', N'Nhật Bản', 79000, 1050),
+('SP20230407', N'Sushi', N'Nhật Bản', N'Nhật Bản', 1000, 50000)
 insert into HoaDon
 values
 ('HD24022401', '2024-02-23', '8319000245', '0400002002', 75000),
@@ -99,3 +102,27 @@ values
 ('HD24022402', 'SP20230403' ,19, 100),
 ('HD24022403', 'SP20230401' ,3, 300)
 
+
+update SanPham
+set Gia += Gia * 0.1	
+where NuocSX = N'Nhật Bản'
+
+update CTHD
+set GiaBan += GiaBan * 0.2 
+
+alter table KhachHang
+add Email varchar(100)
+
+update KhachHang
+set Email = MaKH+ '@shopee.vn'
+
+delete from NhanVien
+where (Year(Getdate()) - year(NgaySinh) > 40)
+
+delete from HoaDon
+from KhachHang
+where HoaDon.MaKH = KhachHang.MaKH and KhachHang.SoDt = '0963600126'
+
+delete from KhachHang
+from HoaDon
+where HoaDon.MaKH = KhachHang.MaKH and (year(GETDATE()) != year(HoaDon.NgayHD))
