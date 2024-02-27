@@ -125,13 +125,8 @@ where NuocSX = N'Nhật Bản' OR NuocSX =  N'Nhật' OR NuocSX = 'Japan'
 -- cap nhat gia loi 20%
 update CTHD
 set GiaBan += GiaBan * 0.2 
-
--- cap nhat email 
-alter table KhachHang
-add Email varchar(100)
-GO
-update KhachHang
-set Email = MaKH+ '@shopee.vn'
+from SanPham
+where SanPham.MaSP = CTHD.MaSP
 
 -- xoa nhan vien tren 40 tuoi
 delete from NhanVien
@@ -149,4 +144,6 @@ where HoaDon.MaKH = KhachHang.MaKH and KhachHang.SoDt = '0963600126'
 delete from KhachHang
 from HoaDon
 where HoaDon.MaKH = KhachHang.MaKH and datediff(day, HoaDon.NgayHD, GETDATE()) > 365
+
+
 
