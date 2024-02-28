@@ -142,8 +142,8 @@ where HoaDon.MaKH = KhachHang.MaKH and KhachHang.SoDt = '0963600126'
 
 -- xoa khach hang mot nam khong co don hang nao
 delete from KhachHang
-from HoaDon
-where HoaDon.MaKH = KhachHang.MaKH and datediff(day, HoaDon.NgayHD, GETDATE()) > 365
+from HoaDon, CTHD
+where HoaDon.MaKH = KhachHang.MaKH and datediff(day, HoaDon.NgayHD, GETDATE()) > 365 or HoaDon.MaKH not in (Select MaKH from HoaDon)
 
 
 

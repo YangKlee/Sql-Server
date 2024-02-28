@@ -27,4 +27,4 @@ values
 
 insert into SinhVien
 values
-('4651050044', N'Nguyễn Khánh Dương')
+('4651050044', N'Nguyễn Khánh Dương', )
