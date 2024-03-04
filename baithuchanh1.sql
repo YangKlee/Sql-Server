@@ -86,16 +86,20 @@ values
 ('0100002001', N'Klee', '2005-07-27', 1, '2019-04-27', '0242336531', 'klee@mondstadt.email.com' ),
 ('0300002002', N'Nahida', '2005-10-27', 1, '2014-04-16', '0244332531', 'thao@sumeru.email.com' ),
 ('0200002004', N'Xiao', '1980-04-17', 0, '2020-09-02', '0952336531', 'iuaethervai@liyue.email.com' )	
+
 insert into SanPham
 values
-('SP20230401', N'Fonta', N'Viện KH Fontaine', 'Fontaine', 9000, 2000),
-('SP20230402', N'Hòm 2 tầng', N'Vãng Sinh Đường', 'Liyue', 20500000, 100),
-('SP20230403', N'Sữa Dango', N'Thành Inazuma', 'Inazuma', 15000, 1000),
-('SP20230404', N'Nước thánh Barbara', N'Không rõ nguồn gốc', 'Mondstadt', 100000, 300),
-('SP20230405', N'Nồi cơm điện', N'Nhật Bản', N'Nhật Bản', 5400000, 1500),
-('SP20230406', N'Gối ôm Nahida', N'Trung Quốc', N'Trung Quốc', 79000, 1050),
-('SP20230407', N'Sushi', N'Nhật Bản', N'Nhật Bản', 75000, 5000),
-('SP20230408', N'Thùng xốp cho hai người', N'Việt Nam', N'Việt Nam', 15000, 9000)
+('SP20230401', N'Fonta', N'Chai', 'Fontaine', 9000, 2000),
+('SP20230402', N'Hòm 2 tầng', N'Chiếc', 'Liyue', 20500000, 100),
+('SP20230403', N'Sữa Dango', N'Chai', 'Inazuma', 15000, 1000),
+('SP20230404', N'Nước thánh Barbara', N'Chai', 'Mondstadt', 100000, 300),
+('SP20230405', N'Nồi cơm điện', N'Cái', N'Nhật Bản', 5400000, 1500),
+('SP20230406', N'Gối ôm Nahida', N'Cái', N'Trung Quốc', 79000, 1050),
+('SP20230407', N'Sushi', N'Hộp', N'Nhật Bản', 75000, 5000),
+('SP20230408', N'Thùng xốp cho hai người', N'Thùng', N'Việt Nam', 15000, 9000),
+('SP24225049', N'Máy tính Apple', N'Chiếc', N'Mỹ', 15000000, 350),
+('SP24225050', N'Máy tính bảng', N'Chiếc', N'Nhật', 15000000, 350),
+('SP24225051', N'Máy tính xách tay', N'Chiếc', N'Trung Quốc', 15000000, 350)
 insert into HoaDon(SoHD, NgayHD, MaKH, MaNV)
 values
 ('HD26022401', '2024-02-26', '4651050044', '0100002001'),

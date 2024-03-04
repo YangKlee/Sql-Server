@@ -10,13 +10,13 @@ where DiaChi like N'%Quy Nhơn%'
 select MaSP, TenSP, Gia, SoLuong from SanPham
 where Gia > 100000 and SoLuong > 50
 -- khach hang chua tung mua hang o cong ty
-select MaKH, HoTen, DiaChi from KhachHang
+select KhachHang.* from KhachHang
 where MaKH not in (Select MaKH from HoaDon)
 -- san pham san xuat o nhat ban
 select * from SanPham
 where NuocSX = N'Nhật Bản' or NuocSX = N'Nhật' or NuocSX = 'Japan'
 -- khach hang nao da mua Sữa Dango
-select KhachHang.MaKH, KhachHang.HoTen from KhachHang, CTHD, HoaDon, SanPham
+select KhachHang.* from KhachHang, CTHD, HoaDon, SanPham
 where SanPham.TenSP = N'Sữa Dango' and SanPham.MaSP = CTHD.MaSP and HoaDon.SoHD = CTHD.SoHD and HoaDon.MaKH = KhachHang.MaKH
 -- don hang so HD26020307 do ai ai dat, nhan vien nao lap, tri gia bao nhieu
 select HoaDon.SoHD ,KhachHang.HoTen, NhanVien.HoTen, SanPham.TenSP,HoaDon.TriGia from KhachHang, NhanVien, HoaDon, CTHD, SanPham
@@ -44,7 +44,7 @@ select * from KhachHang
 where SoDt = NULL
 
 -- san pham chua ban duoc
-select SanPham.MaSP, SanPham.TenSP from SanPham, CTHD, HoaDon
+select distinct  SanPham.MaSP, SanPham.TenSP from SanPham, CTHD, HoaDon
 where SanPham.MaSP not in (select MaSP from CTHD)
 -- xem khach hang sinh nhat hom nay
 select * from KhachHang
