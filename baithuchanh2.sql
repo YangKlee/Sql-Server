@@ -26,6 +26,10 @@ and HoaDon.MaKH = KhachHang.MaKH and CTHD.SoHD = HoaDon.SoHD and CTHD.MaSP = San
 
 
 
+-- them san pham sua dua
+insert into SanPham
+values('SP05030001', N'Sữa dừa Ganyu','Chai','Liyue', 60000, 699)
+
 -- them cot gioi tinh vao bang khach hang
 alter table KhachHang
 add GioiTinh bit null
@@ -50,3 +54,28 @@ where NgaySinh = getdate()
 -- xoa nhan vien tren 40
 delete NhanVien
 where YEAR(GETDATE()) -  year(NgaySinh) > 40
+
+
+-- thong ke so luong len don va cho biet tinh trang san pham
+select SanPham.TenSP, count(CTHD.MaSP) as 'SL Len don',
+case
+	when count(CTHD.MaSP) >= 3 then N'Bán chạy'
+	when count(CTHD.MaSP) < 3 and count(CTHD.MaSP) >= 2 then N'Bán chậm'
+	else N'Bán ế'
+	End as 'Status'
+
+from SanPham, CTHD
+where SanPham.MaSP = CTHD.MaSP 
+group by SanPham.TenSP
+
+-- tao bang danh sach huu, gom nhan vien ve huu theo quy dinh (nam tren 60 nu tren 55)
+select MaNV, HoTen, GioiTinh, Email, NgaySinh into DSHUU from NhanVien
+where (GioiTinh = 1 and (year(GETDATE()) - year(NgaySinh) > 55)) or (GioiTinh = 0 and year(GETDATE()) - year(NgaySinh) > 60)
+
+-- cho biet hoa son do HD26022306 lap cach day bao nhiu ngay
+select HoaDon.SoHD , DATEDIFF(DAY , HoaDon.NgayHD , GETDATE()) as 'So ngay' from HoaDon
+where HoaDon.SoHD = 'HD26022306'
+
+-- danh sach khach hang da mua hang ngay hom qua
+select KhachHang.MaKH, HoTen , NgayHD as 'Ngay mua' from KhachHang, HoaDon, CTHD
+where DATEDIFF(Day, HoaDon.NgayHD , GETDATE()) = 1;
