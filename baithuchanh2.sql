@@ -24,7 +24,9 @@ from KhachHang, NhanVien, HoaDon, CTHD, SanPham
 where HoaDon.SoHD = 'HD26020307' and HoaDon.MaNV = NhanVien.MaNV 
 and HoaDon.MaKH = KhachHang.MaKH and CTHD.SoHD = HoaDon.SoHD and CTHD.MaSP = SanPham.MaSP
 
-
+-- cho biet nhan vien nao chinh la khach hang cty
+select KhachHang.* from NhanVien inner join KhachHang
+on KhachHang.SoDt = NhanVien.SoDt
 
 -- them san pham sua dua
 insert into SanPham
@@ -79,3 +81,30 @@ where HoaDon.SoHD = 'HD26022306'
 -- danh sach khach hang da mua hang ngay hom qua
 select KhachHang.MaKH, HoTen , NgayHD as 'Ngay mua' from KhachHang, HoaDon, CTHD
 where DATEDIFF(Day, HoaDon.NgayHD , GETDATE()) = 1;
+
+-- cho biet nhan vien nao tung mua hang cua cong ty
+select NhanVien.HoTen , SoHD from NhanVien,KhachHang, HoaDon
+where KhachHang.HoTen = NhanVien.HoTen and KhachHang.MaKH = HoaDon.MaKH
+-- xuat hoa don co tu 3 masp tro len
+select sohd, count(masp) from CTHD
+Group by SOHD
+having count(masp) >=3
+
+-- xem khach hang co cung dia chi voi Nguyen Yen Nhi
+select * from KhachHang
+where diachi = (select diachi from KhachHang where HoTen like N'%Nguyễn Yến Nhi%')
+-- tinh tong so tien ban duoc tren moi san pham
+select SanPham.TenSP , count(CTHD.MaSP) as 'SL Ban duoc',count(CTHD.MaSP)*SanPham.Gia as 'So tien'  from SanPham, CTHD
+where SanPham.MaSP = CTHD.MaSP
+group by TenSP, Gia
+-- san pham duoc ban nhieu nhat
+Select top 1 SanPham.MaSP, SanPham.TenSP, count(CTHD.MaSP) as SLBAN from SanPham,CTHD
+where SanPham.MaSP = CTHD.MaSP
+group by TenSP, SanPham.MaSP, CTHD.MaSP
+order by count(CTHD.MaSP) DESC
+
+-- san pham ban trong  hai thang gan day
+select distinct SanPham.MaSP, TenSP, DATEDIFF(MONTH, NgayHD, GETDATE()) as 'So thang' from SanPham, CTHD, HoaDon
+where CTHD.SoHD = HoaDon.SoHD and CTHD.MaSP = SanPham.MaSP
+group by SanPham.MaSP, TenSP, NgayHD
+having DATEDIFF(MONTH, NgayHD, GETDATE()) <= 2  and DATEDIFF(MONTH, NgayHD, GETDATE()) >=-2
