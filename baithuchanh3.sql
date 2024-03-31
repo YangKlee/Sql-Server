@@ -44,3 +44,11 @@ where KhachHang.MaKH = temp.MaKH
 select sum(HoaDon.TriGia-(SanPham.Gia*SanPham.SoLuong)) as 'Tien loi'from CTHD 
 inner join SanPham on SanPham.MaSP = CTHD.MaSP join HoaDon on CTHD.SoHD = HoaDon.SoHD
 where year(NgayHD) = 2023
+-- nhan vien cong ty ban so luong hang nhieu nhat
+select NhanVien.MaNV, HoTen, sum(SoLuong) as SLDat from NhanVien inner join HoaDon on
+NhanVien.MaNV = HoaDon.MaNV join CTHD on HoaDon.SoHD = CTHD.SoHD 
+group by NhanVien.MaNV, HoTen
+having SUM(SoLuong) = (select top(1) Sum(SoLuong)
+from NhanVien inner join HoaDon on NhanVien.MaNV = HoaDon.MaNV join CTHD on HoaDon.SoHD = CTHD.SoHD
+group by NhanVien.MaNV, HoTen
+order by SUM(SoLuong) DESC)

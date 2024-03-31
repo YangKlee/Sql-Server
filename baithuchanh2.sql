@@ -98,10 +98,13 @@ select SanPham.TenSP , count(CTHD.MaSP) as 'SL Ban duoc',count(CTHD.MaSP)*SanPha
 where SanPham.MaSP = CTHD.MaSP
 group by TenSP, Gia
 -- san pham duoc ban nhieu nhat
-Select top 1 SanPham.MaSP, SanPham.TenSP, count(CTHD.MaSP) as SLBAN from SanPham,CTHD
-where SanPham.MaSP = CTHD.MaSP
-group by TenSP, SanPham.MaSP, CTHD.MaSP
-order by count(CTHD.MaSP) DESC
+select SanPham.MaSP, SanPham.TenSP, sum(CTHD.SoLuong) from SanPham inner join CTHD on 
+SanPham.MaSP = CTHD.MaSP join HoaDon on CTHD.SoHD = HoaDon.SoHD
+group by SanPham.MaSP, SanPham.TenSP
+having sum(CTHD.SoLuong)  = (select  top(1) sum(CTHD.SoLuong) from SanPham inner join CTHD on 
+SanPham.MaSP = CTHD.MaSP join HoaDon on CTHD.SoHD = HoaDon.SoHD
+group by SanPham.MaSP, SanPham.TenSP 
+order by sum(CTHD.SoLuong) DESC)
 
 -- san pham ban trong  hai thang gan day
 select distinct SanPham.MaSP, TenSP, DATEDIFF(MONTH, NgayHD, GETDATE()) as 'So thang' from SanPham, CTHD, HoaDon
