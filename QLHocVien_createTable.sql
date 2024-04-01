@@ -17,9 +17,10 @@ create table GiaoVien
 create table MonHoc
 (
 	MaMonHoc nchar(10) primary key,
-	TenMonHoc nvarchar(10) not null,
+	TenMonHoc nvarchar(50) not null,
 	SoChi int not null
 )
+
 create table GiaoVien_Day_MonHoc
 (
 	MaGV nchar(10)
@@ -134,5 +135,5 @@ values
 ('MH00006', N'Công nghệ phần mềm', 4),
 ('MH00007', N'Trí tuệ nhân tạo', 4),
 ('MH00008', N'Khai thác dữ liệu', 3),
-('MH00009', N'Phân tích thiết kế hệ thống thông tin', 5),
-('MH00010', N'Cơ sở dữ liệu', 5)
+('MH00009', N'Phân tích thiết kế hệ thống thông tin', 3),
+('MH00010', N'Hệ thống thông minh', 4)
