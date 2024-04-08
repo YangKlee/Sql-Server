@@ -146,18 +146,17 @@ values
 ('HD27020307', 'SP20230401', 200, 0),
 ('HD27020308', 'SP24225049', 2, 0)
 
--- tu dong cap nhat gia cho cthd
+-- tu dong cap nhat tri gia cho hoa don
+update HoaDon
+set TriGia = CTHD.SoLuong*CTHD.GiaBan
+from CTHD
+where HoaDon.SoHD = CTHD.SoHD
+
+-- tu dong cap nhat gia ban cho ban cthd
 update CTHD
-set GiaBan = CTHD.SoLuong*SanPham.Gia
+set GiaBan = SanPham.Gia
 from SanPham
 where SanPham.MaSP = CTHD.MaSP
-
--- tu dong cap nhat gia cho tri gia bang hoa don
-update HoaDon
-set TriGia = SanPham.Gia*CTHD.SoLuong
-from SanPham, CTHD
-where SanPham.MaSP = CTHD.MaSP and HoaDon.SoHD = CTHD.SoHD
-
 
 -- sp tai nhat tang 10%
 update SanPham

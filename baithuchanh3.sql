@@ -41,7 +41,7 @@ from (select makh, sum(trigia) as doanhso from HoaDon
 group by makh) as temp
 where KhachHang.MaKH = temp.MaKH
 -- tong tien loi cong ty thu duoc nam 2023
-select sum(CTHD.GiaBan-(SanPham.Gia*CTHD.SoLuong)) as 'Tien loi'from CTHD 
+select sum((CTHD.GiaBan*CTHD.SoLuong)-(SanPham.Gia*CTHD.SoLuong)) as 'Tien loi'from CTHD 
 inner join SanPham on SanPham.MaSP = CTHD.MaSP join HoaDon on CTHD.SoHD = HoaDon.SoHD
 where year(NgayHD) = 2024
 
@@ -55,7 +55,7 @@ group by NhanVien.MaNV, HoTen
 order by SUM(SoLuong) DESC)
 
 -- tinh tong tien loi thu duoc tu moi mat hang 2024
-select SanPham.MaSP, TenSP, sum(CTHD.GiaBan- (SanPham.Gia * CTHD.SoLuong)) as TienLoi
+select SanPham.MaSP, TenSP, sum(CTHD.GiaBan* CTHD.SoLuong- (SanPham.Gia * CTHD.SoLuong)) as TienLoi
 from SanPham inner join CTHD on SanPham.MaSP = CTHD.MaSP join HoaDon on HoaDon.SoHD = CTHD.SoHD
 where year(NgayHD) = 2024
 group by SanPham.MaSP, TenSP
