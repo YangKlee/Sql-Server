@@ -187,4 +187,9 @@ from HoaDon, CTHD
 where HoaDon.MaKH = KhachHang.MaKH and datediff(day, HoaDon.NgayHD, GETDATE()) > 365 or HoaDon.MaKH not in (Select MaKH from HoaDon)
 
 
+-- SET EMAIL
+alter table KhachHang
+add Email nvarchar(40) null
 
+update KhachHang
+set Email = MaKH+ '@st.qnu.edu.vn'
