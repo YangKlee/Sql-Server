@@ -15,9 +15,9 @@ where MaKH not in (Select MaKH from HoaDon)
 -- san pham san xuat o nhat ban
 select * from SanPham
 where NuocSX = N'Nhật Bản' or NuocSX = N'Nhật' or NuocSX = 'Japan'
--- khach hang nao da mua Sữa Dango
+-- khach hang nao da mua Sữa
 select KhachHang.* from KhachHang, CTHD, HoaDon, SanPham
-where SanPham.TenSP = N'Sữa Dango' and SanPham.MaSP = CTHD.MaSP and HoaDon.SoHD = CTHD.SoHD and HoaDon.MaKH = KhachHang.MaKH
+where SanPham.TenSP LIKE N'%Sữa%' and SanPham.MaSP = CTHD.MaSP and HoaDon.SoHD = CTHD.SoHD and HoaDon.MaKH = KhachHang.MaKH
 -- don hang so HD26020307 do ai ai dat, nhan vien nao lap, tri gia bao nhieu
 select HoaDon.SoHD ,KhachHang.HoTen, NhanVien.HoTen as 'Nhan vien lap', SanPham.TenSP,HoaDon.TriGia 
 from KhachHang, NhanVien, HoaDon, CTHD, SanPham
