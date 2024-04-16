@@ -3,7 +3,7 @@ create proc XemDoanhSo (@Code char(10)) as
 begin
 	select MaKH, HoTen, DoanhSo from KhachHang where MaKH = @Code
 end
-execute XemDoanhSo @Code = '4651050189'
+XemDoanhSo'4651050189'
 -- viet thu tuc xem san pham co gia tri > x va so luong it hon y
 create proc XemSP (@xvalue int, @yvalue int) as
 begin
@@ -19,3 +19,14 @@ begin
 	having HoaDon.MaNV = @NVCODE
 end
 execute SoHDNVLap @NVCODE = '0300002002'
+-- san pham mua sl nhieu nhat
+alter proc MaxSPSL as
+begin
+	DECLARE @SPSLMAX int
+	SET @SPSLMAX = (select TOP(1) SUM(CTHD.SoLuong) from SanPham inner join CTHD on CTHD.MaSP = SanPham.MaSP
+					group by CTHD.MaSP
+					order by SUM(CTHD.SoLuong) DESC)
+	select CTHD.MaSP ,TenSP,SUM(CTHD.SoLuong) as SLDATMUA from SanPham inner join CTHD on CTHD.MaSP = SanPham.MaSP group by CTHD.MaSP , TenSP
+	having SUM(CTHD.SoLuong) = @SPSLMAX
+end
+exec MaxSPSL
