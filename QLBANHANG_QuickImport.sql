@@ -11,7 +11,7 @@ BEGIN
 END
 exec KhachHang_Input 'KH998', N'Trương Mỹ Lan', N'Hà Nội, Việt Nam', 0, '1992-06-24', 19997187, null
 exec KhachHang_Input 'KH554', N'Lê Ngọc Vi', N'Tuy Phước, Bình Định', 0358191851, '2005-06-26', 54648498, null
-
+exec KhachHang_Input 'KH555', N'Toàn Đẹp Trai', N'Quy Nhơn, Bình Định', 0258191851, '2005-06-26', 58498, null
 alter proc Update_Gia as
 BEGIN
 	update CTHD
@@ -52,6 +52,10 @@ Exec Import_HoaDon 'HD16042401', N'Nguyễn Khánh Dương', 'Klee', 'Fonta', 9
 Exec Import_HoaDon 'HD16042413', N'ningguang', 'Neuvilete', 'Fonta' ,1999
 Exec Import_HoaDon 'HD16042414', N'ningguang', 'Klee', N'Máy tính xách tay' ,200
 Exec Import_HoaDon 'HD16042416', N'ningguang', 'Klee', N'Hòm 2 tầng' ,200
+Exec Import_HoaDon 'HD16042420', N'Trần Thanh Cường', 'Klee', N'Gối ôm Nahida' ,2
+Exec Import_HoaDon 'HD16042422', N'Toàn đẹp trai', 'Klee', N'Thùng xốp cho hai người' ,2
+select * from CTHD where SoHD = 'HD16042423'
+Exec Import_HoaDon 'HD16042423', N'Trần Thanh Cường', 'Klee', N'Nước hoa' ,10
 alter proc XemMatHangMua(@TenKH nvarchar(60)) as
 BEGIN
 	DECLARE @GetMaKH1 char(10)
@@ -62,5 +66,4 @@ BEGIN
 	group by SanPham.MaSP, TenSP
 END
 
-exec XemMatHangMua N'Nguyễn Yến Nhi'
-
+exec XemMatHangMua N'Toàn đẹp trai'
