@@ -30,3 +30,18 @@ begin
 	having SUM(CTHD.SoLuong) = @SPSLMAX
 end
 exec MaxSPSL
+-- viet thu tuc xem hoa don x la do nhan vien nao lap, co bao nhieu san pham tren hoa don
+alter proc Xem_SP_NV_LAP (@SoHD char(10)) as
+BEGIN
+	select HoaDon.SoHD, NhanVien.MaNV, HoTen as TenNVLap, count(MaSP) as SoSP from NhanVien inner join HoaDon on NhanVien.MaNV = HoaDon.MaNV 
+	join CTHD on CTHD.SoHD = HoaDon.SoHD
+	group by HoaDon.SoHD, NhanVien.MaNV, HoTen
+	having HoaDon.SoHD = @SoHD
+END
+select * from SanPham
+-- viet thu tuc xem hoa don lap ngay hom qua
+create proc XemHDYesterday as
+BEGIN
+	select * from HoaDon where DATEDIFF(DAY, NgayHD, GETDate()) = 1
+END
+exec XemHDYesterday
