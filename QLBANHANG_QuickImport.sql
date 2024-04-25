@@ -44,7 +44,7 @@ BEGIN
 	insert into CTHD values(@SoHD, @GetMaSP, @SoLuong, null)
 END
 BEGIN
-	exec Update_Gia
+	--exec Update_Gia
 END
 Exec Import_HoaDon 'HD16042405', N'Furina', 'Nahida', N'Fonta', 40
 Exec Import_HoaDon 'HD160424', N'Trương Mỹ Lan', 'Furina', N'Hòm 2 tầng' ,3
@@ -54,8 +54,10 @@ Exec Import_HoaDon 'HD16042414', N'ningguang', 'Klee', N'Máy tính xách tay' ,
 Exec Import_HoaDon 'HD16042416', N'ningguang', 'Klee', N'Hòm 2 tầng' ,200
 Exec Import_HoaDon 'HD16042420', N'Trần Thanh Cường', 'Klee', N'Gối ôm Nahida' ,2
 Exec Import_HoaDon 'HD16042422', N'Toàn đẹp trai', 'Klee', N'Thùng xốp cho hai người' ,2
+Exec Import_HoaDon 'HD23042405' , N'Trần Thanh Cường', 'Furina', N'Loli nhốt 2 tháng dưới tầng hầm' ,1
 select * from CTHD where SoHD = 'HD16042423'
-Exec Import_HoaDon 'HD16042423', N'Trần Thanh Cường', 'Klee', N'Nước hoa' ,10
+Exec Import_HoaDon 'HD16042499', N'Trần Thanh Cường', 'Klee', N'Loli nhốt 2 tháng dưới tầng hầm' ,100
+select * from SanPham
 alter proc XemMatHangMua(@TenKH nvarchar(60)) as
 BEGIN
 	DECLARE @GetMaKH1 char(10)
@@ -66,4 +68,4 @@ BEGIN
 	group by SanPham.MaSP, TenSP
 END
 
-exec XemMatHangMua N'Toàn đẹp trai'
+exec XemMatHangMua N'Trần Thanh Cường'

@@ -1,4 +1,4 @@
-﻿use QLBANHANG
+﻿use QLBANHANG	
 GO
 --rang buoc so luong bang san pham
 create trigger RangBuocSLCTHD on CTHD
@@ -27,9 +27,9 @@ BEGIN
 	END
 END
 -- test
-insert into SanPham values('SPTEST', N'Loli nhốt 2 tháng dưới tầng hầm', N'Bé', N'Việt Nam', 100000000, 1)
+insert into SanPham values('SPTEST', N'Loli nhốt 2 tháng dưới tầng hầm', N'Bé', N'Việt Nam', 100000000, 100)
 select * from SanPham
-GO
+ 
 
 alter trigger Print_Info_SP_Modify on SanPham
 For update, delete as
@@ -48,3 +48,31 @@ END
 update SanPham
 set Gia = 17500
 where MaSP  = 'SP20230408' 
+GO
+-- cap nhat gia ban cho hoa don , cthd
+alter trigger UpdateGiaHD on CTHD
+for update, insert as
+BEGIN 
+	update CTHD
+	set GiaBan = SanPham.Gia * 0.1
+	from SanPham, inserted
+	where SanPham.MaSP = inserted.MaSP
+	-- cap nhat sl
+	DECLARE @SLMUA int =  (select SoLuong from inserted)
+	DECLARE @SLHangTon int = (select SanPham.SoLuong from SanPham inner join inserted on SanPham.MaSP = inserted.MaSP
+	where SanPham.MaSP =  inserted.MaSP)
+	if(@SLMUA <= @SLHangTon)
+	BEGIN
+		update SanPham
+		set SoLuong -= @SLMUA
+		from inserted
+		where SanPham.MaSP = inserted.MaSP
+	END
+	else 
+	BEGIN
+		print('San pham mua vuot qua luong hang trong kho')
+		rollback tran
+	END
+	
+END
+select * from SanPham
