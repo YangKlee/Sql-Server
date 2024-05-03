@@ -76,3 +76,34 @@ BEGIN
 	
 END
 select * from SanPham
+ALTER trigger [dbo].[UpdateCTHD] on [dbo].[CTHD]
+for insert , update as
+BEGIN
+	DECLARE @SLHANGMUA int = (select SoLuong from inserted)
+	DECLARE @SLHANGTON int = (select SanPham.SoLuong from SanPham inner join inserted on SanPham.MaSP = inserted.MaSP
+	where SanPham.MaSP =  inserted.MaSP)
+	if(@SLHANGMUA <= @SLHANGTON)
+	BEGIN
+		update HoaDon
+		set TriGia = inserted.GiaBan * @SLHANGMUA
+		from inserted
+		where HoaDon.SoHD = inserted.SoHD
+		DECLARE @MAKHMUAHANG char(10) = (select KhachHang.MaKH from KhachHang inner join HoaDon on HoaDon.MaKH = KhachHang.MaKH
+		inner join inserted on HoaDon.SoHD = inserted.SoHD)
+		DECLARE @TONGDOANHSOKH int = (select sum(TriGia) from HoaDon inner join inserted on HoaDon.SoHD = inserted.SoHD
+		inner join KhachHang on KhachHang.MaKH = HoaDon.MaKH
+		group by HoaDon.MaKH)
+		update KhachHang
+		set DoanhSo = @TONGDOANHSOKH
+		where MaKH = @MAKHMUAHANG
+	END
+	else
+	BEGIN 
+		print('Luong hang mua lon hon luong hang ton kho')
+		rollback tran
+	END
+END
+update CTHD
+set GiaBan = GiaBan*0.1
+where SoHD = 'HD24442406'
+select * from HoaDon where SoHD = 'HD24442406'

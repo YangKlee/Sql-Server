@@ -11,7 +11,7 @@ BEGIN
 END
 exec KhachHang_Input 'KH998', N'Trương Mỹ Lan', N'Hà Nội, Việt Nam', 0, '1992-06-24', 19997187, null
 exec KhachHang_Input 'KH554', N'Lê Ngọc Vi', N'Tuy Phước, Bình Định', 0358191851, '2005-06-26', 54648498, null
-exec KhachHang_Input 'KH555', N'Toàn Đẹp Trai', N'Quy Nhơn, Bình Định', 0258191851, '2005-06-26', 58498, null
+exec KhachHang_Input 'KH556', N'Ngôn Nhất Vĩ', N'Quy Nhơn, Bình Định', 0258191852, '2005-06-26', 1, null
 alter proc Update_Gia as
 BEGIN
 	update CTHD
@@ -54,7 +54,7 @@ Exec Import_HoaDon 'HD16042414', N'ningguang', 'Klee', N'Máy tính xách tay' ,
 Exec Import_HoaDon 'HD16042416', N'ningguang', 'Klee', N'Hòm 2 tầng' ,200
 Exec Import_HoaDon 'HD16042420', N'Trần Thanh Cường', 'Klee', N'Gối ôm Nahida' ,2
 Exec Import_HoaDon 'HD16042422', N'Toàn đẹp trai', 'Klee', N'Thùng xốp cho hai người' ,2
-Exec Import_HoaDon 'HD23042405' , N'Trần Thanh Cường', 'Furina', N'Loli nhốt 2 tháng dưới tầng hầm' ,1
+Exec Import_HoaDon 'HD24442406' , N'Ngôn Nhất Vĩ', 'Furina', N'Trà chanh giã chân' ,1
 select * from CTHD where SoHD = 'HD16042423'
 Exec Import_HoaDon 'HD16042499', N'Trần Thanh Cường', 'Klee', N'Loli nhốt 2 tháng dưới tầng hầm' ,100
 select * from SanPham
