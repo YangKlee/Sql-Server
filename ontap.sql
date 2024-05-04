@@ -22,14 +22,11 @@ case
 from duan left join phancong on duan.maduan = phancong.maduan
 group by duan.maduan
 -- tang luong them 200000 cho nhan vien tham gia 3 du an tro len
-create view getphongban_3duan as
-select phongban.Maphong from phongban inner join duan on phongban.Maphong = duan.maphong
-group by phongban.Maphong
-having COUNT(duan.maduan) >= 3
-GO
 update nhanvien
 set luong += 200000
-where maphong = (select * from getphongban_3duan)
+where manv in (select manv from phancong
+				group by manv
+				having COUNT(maduan)>=3)
 -- cho biet co bao nhieu du an o binh dinh
 select COUNT(maduan) as 'So du an o Binh Dinh' from duan
 where diadiem like N'%Bình Định%' or diadiem = N'BĐ'
@@ -41,7 +38,7 @@ select duan.maduan, duan.diadiem, sum(sogio) as 'Tong so gio' from duan inner jo
 group by duan.maduan, duan.diadiem
 having (diadiem like N'%Bình Định%' or diadiem = N'BĐ') and sum(sogio) > 20
 -- thong ke so du an theo ma phong
-select phongban.Maphong, phongban.tenphong, count(duan.maduan) from phongban left join duan on phongban.Maphong = duan.maphong
+select phongban.Maphong, phongban.tenphong, count(duan.maduan) as 'So Du an' from phongban left join duan on phongban.Maphong = duan.maphong
 group by phongban.maphong, tenphong
 --thong tin du an co so gio nhieu nhat
 select duan.maduan, tenduan, diadiem, sum(sogio) as 'Tong so Gio' from duan inner join phancong on duan.maduan = phancong.maduan
@@ -50,14 +47,12 @@ having sum(sogio) = (select top(1) sum(sogio) from duan inner join phancong on d
 					group by duan.maduan
 					order by sum(sogio) DESC)
 -- thong ke moi du an co bao nhieu nhan vien tham gia
-select duan.maduan, COUNT(nhanvien.manv) as 'SL Nhan vien tham gia' from nhanvien join phongban 
-on nhanvien.maphong = phongban.Maphong right join duan on duan.maphong = phongban.Maphong
-group by duan.maduan
-select * from nhanvien
+select duan.maduan, tenduan, COUNT(phancong.manv) as 'Nhan vien tham gia' 
+from duan left join phancong on duan.maduan = phancong.maduan
+group by duan.maduan , tenduan
 -- danh sach nhan vien khong tham gia du an nao
-select nhanvien.* from nhanvien inner join phongban on 
-nhanvien.maphong = phongban.Maphong left join duan on duan.maphong = phongban.Maphong
-where maduan is null
+select nhanvien.* from nhanvien left join phancong on nhanvien.manv = phancong.manv
+where phancong.manv is null
 -- xoa nhung du an chua phan cong cho ai
 delete duan
 from duan left join phancong on duan.maduan = phancong.maduan
@@ -81,14 +76,15 @@ select nhanvien.* from nhanvien left join duan on duan.maphong = nhanvien.maphon
 where maduan is null
 -- phong nao nhan nhieu du an nhat
 select maphong,count(maduan) as 'So du an' from duan
-group by maphong
+group by maphong 
 having COUNT(maduan) = (select top(1) count(maduan) from duan 
 						group by maphong
 						order by count(maduan) DESC)
 -- nhung du an co mot nhan vien tham gia
-select maduan, tenduan, count(manv) as 'SL' from duan left join nhanvien on duan.maphong = nhanvien.maphong
-group by maduan, tenduan
-having COUNT(manv) = 1
+select duan.maduan, tenduan from phancong inner join nhanvien on phancong.manv = nhanvien.manv 
+inner join duan on duan.maduan = phancong.maduan
+group by duan.maduan , tenduan
+having count(nhanvien.manv) = 1
 -- liet ke du an phong big data
 select duan.* from duan inner join phongban on duan.maphong = phongban.Maphong
 where tenphong like N'%Big Data%'
@@ -99,4 +95,40 @@ order by sum(sogio) ASC
 -- danh sach nhan vien co luong thap nhat
 select nhanvien.* from nhanvien
 where luong = (select min(luong) from nhanvien)
--- 
+-- moi nhan vien tham gia bao nhieu du an
+select nhanvien.manv, holot, ten , count(maduan) as 'So du an tham gia'from nhanvien left join phancong on nhanvien.manv = phancong.manv
+group by nhanvien.manv, holot, ten
+-- xoa du an co tong so gio duoi 50
+delete duan
+where maduan in (select duan.maduan from duan left join phancong on duan.maduan = phancong.maduan
+				group by duan.maduan
+				having sum(sogio) < 50)
+-- cho biet phong ban nao chua co du an
+select phongban.* from phongban left join duan on phongban.Maphong = duan.maphong
+where duan.maphong is null
+-- xem thong tin phong ban co hai nhan vien tro len va thuc hien 3 du an tro len
+select phongban.Maphong, tenphong from phongban inner join nhanvien on phongban.Maphong = nhanvien.maphong 
+inner join duan on duan.maphong = phongban.Maphong
+group by phongban.Maphong, tenphong
+having COUNT(nhanvien.manv) >=2 and COUNT(duan.maduan) >=3
+-- viet thu tuc nhap vao ma du an bat ky, in ra thong tin du an do
+alter proc InThongTinDuAn(@maduan char(5)) as
+BEGIN
+	select tenduan, tenphong, sum(sogio) as 'Tong gio' from duan 
+	inner join phancong on duan.maduan = phancong.maduan inner join phongban on phongban.Maphong
+	= duan.maphong
+		where duan.maduan = @maduan
+	group by tenduan, tenphong
+
+END
+exec InThongTinDuAn 1
+-- viet ham tra ve tong du an do phong x dam nhan
+create function GetInfPhongBan (@x char(5))
+-- viet thu tuc nhap vao ma nhan vien bat ky in ra thong tin nhan vien
+create proc GetInfNV(@manv char(5))as
+BEGIN
+	select nhanvien.manv, holot, ten, tenphong, tenduan from nhanvien inner join phongban on nhanvien.maphong= phongban.Maphong
+	inner join phancong  on nhanvien.manv =  phancong.manv inner join duan on phancong.maduan = duan.maduan
+	where nhanvien.manv = @manv	
+END
+exec GetInfNV 'mv1'
