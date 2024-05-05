@@ -124,6 +124,15 @@ END
 exec InThongTinDuAn 1
 -- viet ham tra ve tong du an do phong x dam nhan
 create function GetInfPhongBan (@x char(5))
+returns int as
+BEGIN 
+	DECLARE @SoDuAn int
+	set @SoDuAn = (select count(duan.maduan) from duan right join 
+	phongban on phongban.Maphong = duan.maphong where phongban.Maphong = @x)
+	return @SoDuAn
+
+END
+print (dbo.GetInfPhongBan(3))
 -- viet thu tuc nhap vao ma nhan vien bat ky in ra thong tin nhan vien
 create proc GetInfNV(@manv char(5))as
 BEGIN
@@ -132,3 +141,134 @@ BEGIN
 	where nhanvien.manv = @manv	
 END
 exec GetInfNV 'mv1'
+--viet ham tra ve tong gio du an x
+alter function  GetHoursDuAn(@x char(5))
+returns int as
+BEGIN
+	DECLARE @TongSoGio int
+	set @TongSoGio = (select sum(sogio) from duan left join phancong on duan.maduan = phancong.maduan
+						group by duan.maduan
+						having duan.maduan = @x)
+	if(@TongSoGio is null)
+	BEGIN
+		return 0
+	END
+	return @TongSoGio
+
+END
+print(dbo.GetHoursDuAn(1))
+-- viet ham nhap ma nhan vien x tra ve tong so du an 
+create function GetDuAnNhanVien(@x char(5))
+returns int as
+BEGIN 
+	DECLARE @TongSoDuAn int
+	set @TongSoDuAn = (select count(maduan) from nhanvien left join phancong on nhanvien.manv = phancong.manv
+						group by nhanvien.manv
+						having nhanvien.manv = @x)
+	if(@TongSoDuAn is null) return 0
+	return @TongSoDuAn
+END
+print(dbo.GetDuAnNhanVien('mv1'))
+-- viet thu tuc nhap ma phong x va in ra thong tin cua phong va du an phong do dam nhan
+create proc GetPhong(@x char(5)) as
+BEGIN
+	select * from phongban where Maphong = @x
+	select duan.maduan,duan.tenduan, duan.diadiem from duan inner join phongban on duan.maphong = phongban.Maphong
+	where phongban.maphong = @x
+END
+-- viet ham in ra tong so gio thuc hien du an cua nhan vien x
+create function GetGioDuAn (@x char(5))
+returns int as
+BEGIN
+	DECLARE @TongSoGio int
+	SET @TongSoGio = (select sum(sogio) from nhanvien left join phancong on nhanvien.manv = phancong.manv
+					group by nhanvien.manv
+					having nhanvien.manv = @x)
+	if(@TongSoGio is null) return 0
+	return @TongSoGio
+END
+-- viet ham in ra thoi gian hoan thanh cua du an x
+alter function GetThoiGianDuAn(@x char(5))
+returns varchar(20)
+BEGIN
+	DECLARE @DD int = day(Getdate())
+	DECLARE @MM int = month(Getdate())
+	DECLARE @YY int = year(Getdate())
+	DECLARE @HH int = 0
+	DECLARE @SoGio int = (select sum(sogio) from duan inner join phancong on duan.maduan = phancong.maduan
+							group by duan.maduan
+							having duan.maduan = @x)
+	if(@SoGio >= 24)
+	BEGIN 
+		SET @DD += @SoGio/24
+		SET @HH = @SoGio%24
+	END
+	else
+	BEGIN
+		SET @HH = @SoGio
+	END
+
+	return concat(@DD,'-', @MM, '-',@YY,'-', @HH, 'h')	
+END
+print(dbo.GetThoiGianDuAn(1))
+select * from phancong
+-- viet trigger khong cho phep mot nhan vien thuc hien qua 3 du an
+create trigger GioiHanPhanCong on PhanCong
+for update, insert as
+BEGIN
+	DECLARE @SOLANPHANCONG int
+	DECLARE @Manv char(5) = (select manv from inserted)
+	set @SOLANPHANCONG = (select COUNT(phancong.maduan) from nhanvien left join phancong on nhanvien.manv = phancong.manv
+						group by nhanvien.manv
+						having nhanvien.manv = @Manv)
+	if(@SOLANPHANCONG >3)
+	BEGIN
+		print(N'Một nhân viên không thể quản lý quá 3 dự án')
+		rollback tran
+	END
+END
+select * from phancong
+insert into phancong
+values('mv1', 1, 110)
+-- viet trigger khong cho phep xoa du an o Binh Duong
+create trigger XoaDuAnBinhDuong on Duan
+for delete as
+BEGIN 
+	if((select diadiem from deleted) like N'%Bình Dương%')
+	BEGIN
+		print(N'Khum cho xoá dự án ở Bình Dương!')
+		rollback tran
+	END
+END
+delete duan
+where maduan = 10
+-- Viet trigger khong cho phep them du dan o Dak Nong
+create trigger NoAddDakNong on DuAn
+for insert as
+BEGIN
+	if((select diadiem from inserted) like N'DakNong')
+	BEGIN
+		print(N'Khum cho thêm dự án ở DakNong')
+		rollback tran
+	END
+END
+insert into duan
+values(12, N'Đi tìm kho báu Trương Mỹ Lan', 'DakNong', 1)
+select * from duan
+-- viet trigger khong cho phep mot du an co nhieu hon 5 nhan vien thuc hien
+create trigger PhanCongNhanVien on PhanCong
+for insert, update as
+BEGIN
+	DECLARE @SLNVPC int
+	DECLARE @MaDuAn int = (select maduan from inserted)
+	SET @SLNVPC = (select COUNT(phancong.manv) from phancong inner join nhanvien on phancong.manv = nhanvien.manv
+					right join duan on duan.maduan = phancong.maduan
+					group by duan.maduan
+					having duan.maduan = @MaDuAn
+					)
+	if(@SLNVPC > 5)
+	BEGIN
+		print(N'Khong the phan cong du an nhieu hon 5 nv thuc hien')
+		rollback tran
+	END
+END
