@@ -226,7 +226,7 @@ BEGIN
 		print(N'Một nhân viên không thể quản lý quá 3 dự án')
 		rollback tran
 	END
-END
+END 
 select * from phancong
 insert into phancong
 values('mv1', 1, 110)
