@@ -75,11 +75,12 @@ where duan.maduan = 1
 select nhanvien.* from nhanvien left join duan on duan.maphong = nhanvien.maphong
 where maduan is null
 -- phong nao nhan nhieu du an nhat
+declare @max int = (select top(1) count(maduan) as 'So du an' from duan
+					group by maphong
+					order by count(maduan) DESC)
 select maphong,count(maduan) as 'So du an' from duan
-group by maphong 
-having COUNT(maduan) = (select top(1) count(maduan) from duan 
-						group by maphong
-						order by count(maduan) DESC)
+group by maphong
+having COUNT(maduan)  = @max
 -- nhung du an co mot nhan vien tham gia
 select duan.maduan, tenduan from phancong inner join nhanvien on phancong.manv = nhanvien.manv 
 inner join duan on duan.maduan = phancong.maduan
@@ -243,17 +244,17 @@ END
 delete duan
 where maduan = 10
 -- Viet trigger khong cho phep them du dan o Dak Nong
-create trigger NoAddDakNong on DuAn
+alter trigger NoAddDakNong on DuAn
 for insert as
 BEGIN
-	if((select diadiem from inserted) like N'DakNong')
+	if((select diadiem from inserted) like N'%DakNong%')
 	BEGIN
 		print(N'Khum cho thêm dự án ở DakNong')
 		rollback tran
 	END
 END
 insert into duan
-values(12, N'Đi tìm kho báu Trương Mỹ Lan', 'DakNong', 1)
+values(13, N'Đi tìm kho báu Trương Mỹ Lan', N'Tổ 4,DakNong', 1)
 select * from duan
 -- viet trigger khong cho phep mot du an co nhieu hon 5 nhan vien thuc hien
 create trigger PhanCongNhanVien on PhanCong

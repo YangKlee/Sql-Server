@@ -1,4 +1,4 @@
-﻿create trigger Auto_Update_HoaDon_SP on CTHD
+﻿alter trigger Auto_Update_HoaDon_SP on CTHD
 for insert, update as
 BEGIN
 	DECLARE @SLDAT int = (select SoLuong from inserted)
@@ -10,7 +10,6 @@ BEGIN
 			UPDATE SanPham
 			Set SoLuong -= @SLDAT
 			where MaSP = (select MaSP from inserted)
-			DECLARE @GiaBan int = (select GiaBan from inserted)
 			DECLARE @SoLuong int = (select SoLuong from inserted)
 		END
 		BEGIN
@@ -21,6 +20,7 @@ BEGIN
 			where SoHD = (select SoHD from inserted)
 		END
 		BEGIN
+			DECLARE @GiaBan int = (select GiaBan from CTHD where SoHD = (select SoHD from inserted))
 			UPDATE HoaDon
 			SET TriGia = @GiaBan * @SoLuong
 			where SoHD = (select SoHD from inserted)
@@ -40,6 +40,6 @@ BEGIN
 	SET DoanhSo += (select Trigia from inserted)
 	where MaKH = (select MaKH from inserted)
 END
-
+select * from KhachHang
 
 
