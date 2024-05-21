@@ -39,7 +39,7 @@ select count(phong.maphong) as SoPhong from phong inner join nhatkydatphong on p
 where checkin = GETDATE()
 -- huy thong tin dat phong tu ngay 19/7 - 20/9
 delete nhatkydatphong
-where (day(checkin) >=16 and MONTH(checkin)>= 7) and (day(checkin) <=20 and MONTH(checkin)<= 9) 
+where (day(checkin) >=91 and MONTH(checkin)>= 7) and (day(checkin) <=20 and MONTH(checkin)<= 9) 
 -- co bao nhieu phong pro
 select count(maphong) as SL from phong
 group by loai
@@ -55,7 +55,12 @@ select count(phong.MaPhong) as SL from Phong inner join nhatkydatphong on phong.
 where (day(checkin) = 13 and MONTH(checkin)= 8)
 -- tinh tien dat phong
 update nhatkydatphong
-set TienPhong = 300000* (datediff(day, checkin, checkout)+1)
+set TienPhong = CASE
+	WHEN datediff(day, checkin, checkout) <> 0 then datediff(day, checkin, checkout)*300000
+	else
+		300000
+end
+
 -- so luong nguoi den dat phong nhieu nhat la bao nhieu, ngay nao checkin
 -- viet thu tuc de huy thong tin dat phong cua ma dat phong k nao do
 create proc DeleteInfoDatPhong(@K int) as
@@ -63,6 +68,8 @@ BEGIN
 	delete nhatkydatphong
 	where madatphong = @K
 END
+deleteinfodatphong 5
+
 -- viet ham tra lai so luong phong da dat trong ngay x
 create function ReturnCountRoom(@DayTarget date) 
 returns int as
@@ -71,6 +78,12 @@ BEGIN
 	where DATEDIFF(day, checkin, @DayTarget) = 0)
 	return @SOLUONG
 END
+print(dbo.ReturnCountRoom('2024-07-15'))
+select * from dbo.ReturnCountRoom('2024-07-15')
+create function CuongCuTo(@x int)
+returns table as
+	return (select * from phong where maphong = @x)
+select * from CuongCuTo(1)
 -- viet ham tra ve so ngay o cua ma dat phong x
 alter function Diff_DayCheckInOut(@x int)
 returns int as
@@ -89,7 +102,7 @@ BEGIN
 	set TinhTrang = 'ON'
 	where maphong = @MaPhong
 END
-
+ 
 -- khong cho phep nhap checkin out cung gio
 create trigger Klee_so_cute on NhatKyDatPhong
 for insert as
