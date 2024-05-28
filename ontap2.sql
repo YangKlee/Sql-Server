@@ -41,7 +41,7 @@ where checkin = GETDATE()
 delete nhatkydatphong
 where (day(checkin) >=91 and MONTH(checkin)>= 7) and (day(checkin) <=20 and MONTH(checkin)<= 9) 
 -- co bao nhieu phong pro
-select count(maphong) as SL from phong
+select loai,count(maphong) as SL from phong
 group by loai
 having loai = 'PRO'
 -- thong ke so luong phong theo tang
